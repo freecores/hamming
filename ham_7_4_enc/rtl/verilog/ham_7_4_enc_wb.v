@@ -13,8 +13,8 @@
 ////                                                             ////
 //// Copyright (C) 2004      Soner Yesil & Burak Okcan           ////
 ////                         soneryesil@opencores.org            ////
-////                         burakokcan@opencores.org		     ////
-////		                                    		     ////
+////                         burakokcan@opencores.org		 ////
+////		                                    		 ////
 //// This source file may be used and distributed without        ////
 //// restriction provided that this copyright statement is not   ////
 //// removed from the file and that any derivative work contains ////
@@ -76,7 +76,7 @@ RST_I  	: Active HIGH synchronous reset.
 
 STB_I		: Active HIGH.
 DAT_I[7:0]	: Message input, valid when STB_I, CYC_I and WE_I are HIGH. DAT_I[7:4] is ignored.
-DAT_O[7:0]	: Codeword. Can be monitored by a master module when WE_I is LOW. DAT_O[7] is stuck at 0.
+DAT_O[7:0]	: Codeword. Can be monitored by a master module when WE_I is LOW. DAT_O[7] is not used.
 ADR_I		: Not Used
 ACK_O		: Acknowledge signal: Ready for new data when ACK_O is HIGH.
 WE_I		: Encoding is performed when WE_I is HIGH. 
@@ -85,7 +85,7 @@ CYC_I		: Active HIGH.
 NON-WISHBONE SIGNALS
 --------------------
 
-CODEWORD[7:0] 	: Codeword. Can be monitored by a master module when WE_I is LOW. DAT_O[7] is stuck at 0.
+CODEWORD[7:0] 	: Codeword. Can be monitored by a master module when WE_I is LOW. CODEWORD[7] is not used.
 DV_OUT		: Indicates valid codeword when HIGH.
 
 */
